@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klivr AI — AI Automation for Online Coaches</title>
+<meta name="description" content="We build AI systems that qualify leads, book discovery calls, and follow up automatically — so online coaches can focus on coaching, not chasing.">
+
+<!-- SEO -->
+<meta name="robots" content="index, follow">
+<meta name="author" content="Rey Pilar - Klivr AI">
+<meta name="keywords" content="AI automation for online coaches, GHL automation agency, GoHighLevel specialist, chatbot for coaches, lead automation, AI chatbot, discovery call booking, online coach automation, AI agency Philippines">
+<link rel="canonical" href="https://reyflowph.github.io">
+
+<!-- Open Graph (Facebook & Instagram) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://reyflowph.github.io">
+<meta property="og:title" content="Klivr AI — AI Automation for Online Coaches">
+<meta property="og:description" content="We build AI systems that qualify leads, book discovery calls & follow up automatically — so coaches focus on coaching, not chasing.">
+<meta property="og:image" content="https://i.imgur.com/0J3N0c1.png">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="800">
+<meta property="og:site_name" content="Klivr AI">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Klivr AI — AI Automation for Online Coaches">
+<meta name="twitter:description" content="AI systems that qualify leads & book discovery calls 24/7 for online coaches. Built by a GHL specialist.">
+<meta name="twitter:image" content="https://i.imgur.com/0J3N0c1.png">
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Klivr AI",
+  "description": "AI Automation Agency for Online Coaches. We build AI chatbots, GHL CRM systems, and automation workflows that qualify leads and book discovery calls 24/7.",
+  "founder": {
+    "@type": "Person",
+    "name": "Rey Pilar"
+  },
+  "url": "https://reyflowph.github.io",
+  "logo": "https://i.imgur.com/0J3N0c1.png",
+  "areaServed": "Worldwide",
+  "serviceType": ["AI Automation", "Chatbot Development", "GHL CRM Setup", "Lead Generation Automation"],
+  "knowsAbout": ["GoHighLevel", "AI Chatbots", "Marketing Automation", "Online Coach Marketing"],
+  "sameAs": [
+    "https://klivrai.com"
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#0a0a0a;
+  --white:#ffffff;
+  --accent:#7c5cfc;
+  --accent2:#00e5c3;
+  --muted:#8a8a9a;
+  --surface:#111118;
+  --surface2:#1a1a24;
+  --border:rgba(255,255,255,0.08);
+}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:'Manrope',sans-serif;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Urbanist',sans-serif}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.logo{font-family:'Urbanist',sans-serif;font-weight:800;font-size:1.3rem;letter-spacing:-0.5px;text-decoration:none;color:var(--white)}
+.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+nav a:hover{color:var(--white)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.btn-nav{background:var(--accent);color:var(--white)!important;padding:0.5rem 1.2rem;border-radius:50px;font-size:0.85rem;font-weight:500;transition:opacity 0.2s!important}
+.btn-nav:hover{opacity:0.85!important}
+
+/* LAYOUT */
+section{padding:6rem 2rem}
+.container{max-width:1100px;margin:0 auto}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:5rem;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(124,92,252,0.15) 0%,transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(124,92,252,0.12);border:1px solid rgba(124,92,252,0.3);color:#a78bfa;padding:0.35rem 0.9rem;border-radius:50px;font-size:0.78rem;font-weight:500;margin-bottom:1.5rem;letter-spacing:0.3px}
+.dot{width:6px;height:6px;background:#00e5c3;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-2px;margin-bottom:1.5rem}
+h1 .highlight{color:var(--accent)}
+h1 .highlight2{color:var(--accent2)}
+.hero-sub{font-size:1.05rem;color:var(--muted);line-height:1.7;margin-bottom:2.5rem;font-weight:300}
+.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent);color:var(--white);padding:0.9rem 2rem;border-radius:50px;font-family:'Urbanist',sans-serif;font-weight:600;font-size:0.95rem;text-decoration:none;border:none;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(124,92,252,0.4)}
+.cta-group{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.hero-note{font-size:0.8rem;color:var(--muted);margin-top:1rem}
+
+/* MOCKUP */
+.mockup-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.5rem;position:relative}
+.mockup-header{display:flex;align-items:center;gap:0.5rem;margin-bottom:1.2rem}
+.dot-red{width:10px;height:10px;background:#ff5f57;border-radius:50%}
+.dot-yellow{width:10px;height:10px;background:#febc2e;border-radius:50%}
+.dot-green{width:10px;height:10px;background:#28c840;border-radius:50%}
+.chat-bubble{padding:0.7rem 1rem;border-radius:12px;font-size:0.82rem;line-height:1.5;margin-bottom:0.6rem;max-width:85%}
+.chat-bot{background:var(--surface2);color:var(--white);border-bottom-left-radius:4px}
+.chat-user{background:var(--accent);color:var(--white);margin-left:auto;border-bottom-right-radius:4px}
+.chat-label{font-size:0.7rem;color:var(--muted);margin-bottom:0.3rem}
+.typing{display:flex;gap:4px;padding:0.7rem 1rem;background:var(--surface2);border-radius:12px;width:fit-content;border-bottom-left-radius:4px}
+.typing span{width:6px;height:6px;background:var(--muted);border-radius:50%;animation:bounce 1.2s infinite}
+.typing span:nth-child(2){animation-delay:0.2s}
+.typing span:nth-child(3){animation-delay:0.4s}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.tag-live{position:absolute;top:1rem;right:1rem;background:rgba(0,229,195,0.12);border:1px solid rgba(0,229,195,0.3);color:var(--accent2);padding:0.25rem 0.7rem;border-radius:50px;font-size:0.72rem;font-weight:500;display:flex;align-items:center;gap:0.3rem}
+
+/* PROBLEM */
+.problem{background:var(--surface)}
+.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.problem-card{background:var(--black);border:1px solid var(--border);border-radius:12px;padding:1.5rem}
+.problem-card h4{font-size:0.95rem;margin-bottom:0.5rem;color:var(--white)}
+.problem-card p{font-size:0.85rem;color:var(--muted);line-height:1.6}
+.problem-icon{font-size:1.5rem;margin-bottom:1rem}
+.section-label{font-size:0.75rem;font-weight:600;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:1rem}
+.section-title{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-1px;line-height:1.2;margin-bottom:1rem}
+.section-sub{color:var(--muted);font-size:1rem;line-height:1.7;max-width:540px}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:3rem}
+.service-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:border-color 0.3s,transform 0.3s}
+.service-card:hover{border-color:rgba(124,92,252,0.4);transform:translateY(-4px)}
+.service-icon{width:48px;height:48px;background:rgba(124,92,252,0.12);border:1px solid rgba(124,92,252,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;font-size:1.3rem}
+.service-card h3{font-size:1.1rem;margin-bottom:0.7rem;letter-spacing:-0.3px}
+.service-card p{font-size:0.875rem;color:var(--muted);line-height:1.65}
+.service-tag{display:inline-block;margin-top:1rem;background:rgba(0,229,195,0.08);border:1px solid rgba(0,229,195,0.2);color:var(--accent2);padding:0.2rem 0.7rem;border-radius:50px;font-size:0.72rem}
+.coming-soon{background:rgba(255,255,255,0.05);border:1px dashed rgba(255,255,255,0.15);color:var(--muted)}
+
+/* HOW IT WORKS */
+.how-it-works{background:var(--surface)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem;position:relative}
+.steps::before{content:'';position:absolute;top:2rem;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0.3}
+.step{text-align:center;padding:1.5rem 1rem}
+.step-num{width:48px;height:48px;background:linear-gradient(135deg,var(--accent),#a78bfa);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Urbanist',sans-serif;font-weight:800;font-size:1rem;margin:0 auto 1.2rem;position:relative;z-index:1}
+.step h4{font-size:0.95rem;margin-bottom:0.5rem;letter-spacing:-0.3px}
+.step p{font-size:0.8rem;color:var(--muted);line-height:1.6}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:3rem;max-width:800px;margin-left:auto;margin-right:auto}
+.pricing-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:2.5rem}
+.pricing-card.featured{border-color:var(--accent);background:linear-gradient(135deg,rgba(124,92,252,0.08),var(--surface))}
+.price{font-family:'Urbanist',sans-serif;font-size:2.5rem;font-weight:800;letter-spacing:-2px;margin:1rem 0}
+.price span{font-size:1rem;font-weight:400;color:var(--muted);letter-spacing:0}
+.price-label{font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-weight:500}
+.plan-name{font-size:1.2rem;font-weight:700;margin-bottom:0.3rem}
+.feature-list{list-style:none;margin:1.5rem 0}
+.feature-list li{padding:0.5rem 0;font-size:0.875rem;color:var(--muted);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0.6rem}
+.feature-list li:last-child{border:none}
+.check{color:var(--accent2)}
+.featured-badge{background:var(--accent);color:var(--white);padding:0.2rem 0.8rem;border-radius:50px;font-size:0.7rem;font-weight:600;display:inline-block;margin-bottom:0.5rem}
+.btn-outline{display:block;text-align:center;padding:0.85rem;border-radius:50px;border:1px solid var(--border);color:var(--white);text-decoration:none;font-family:'Urbanist',sans-serif;font-weight:600;font-size:0.9rem;transition:border-color 0.2s,background 0.2s;margin-top:1.5rem;cursor:pointer}
+.btn-outline:hover{border-color:var(--accent);background:rgba(124,92,252,0.08)}
+.btn-accent{background:var(--accent)!important;border-color:var(--accent)!important}
+
+/* FOUNDER */
+.founder{background:var(--surface)}
+.founder-inner{display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;align-items:center;max-width:900px;margin:0 auto}
+.founder-img{width:100%;aspect-ratio:1;border-radius:20px;background:linear-gradient(135deg,rgba(124,92,252,0.2),rgba(0,229,195,0.1));border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
+.founder-initial{font-family:'Urbanist',sans-serif;font-size:4rem;font-weight:800;color:var(--accent)}
+.founder-name-card{font-size:0.85rem;color:var(--muted)}
+.founder-text h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;letter-spacing:-1px;margin-bottom:1.2rem;line-height:1.2}
+.founder-text p{color:var(--muted);font-size:0.95rem;line-height:1.75;margin-bottom:1rem}
+.founder-signature{font-family:'Urbanist',sans-serif;font-size:1.5rem;color:var(--accent);font-weight:700;margin-top:1.5rem}
+
+/* FAQ */
+.faq-list{max-width:700px;margin:3rem auto 0}
+.faq-item{border-bottom:1px solid var(--border);padding:1.5rem 0}
+.faq-q{font-family:'Urbanist',sans-serif;font-size:1rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7;margin-top:0.8rem;display:none}
+.faq-item.open .faq-a{display:block}
+.faq-item.open .faq-arrow{transform:rotate(180deg)}
+.faq-arrow{transition:transform 0.3s;color:var(--muted);font-size:1.2rem;flex-shrink:0}
+
+/* CTA */
+.cta-section{padding:8rem 2rem;text-align:center;position:relative;overflow:hidden}
+.cta-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(124,92,252,0.12) 0%,transparent 70%);pointer-events:none}
+.cta-section h2{font-size:clamp(2rem,4vw,3.5rem);font-weight:800;letter-spacing:-2px;margin-bottom:1.2rem;line-height:1.1}
+.cta-section p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto 2.5rem;line-height:1.7}
+
+/* FOOTER */
+footer{background:var(--surface);border-top:1px solid var(--border);padding:2rem;text-align:center;font-size:0.8rem;color:var(--muted)}
+footer strong{color:var(--white)}
+footer a{color:var(--accent);text-decoration:none}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero-grid,.founder-inner{grid-template-columns:1fr}
+  .problem-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .pricing-grid{grid-template-columns:1fr}
+  .steps::before{display:none}
+  .nav-links{display:none}
+  .hero{padding-top:6rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">Klivr<span>AI</span></a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#how">How it works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://klivrai.com/booking" class="btn-nav">Book a Free Call</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="badge"><span class="dot"></span> For Online Coaches</div>
+        <h1>Your Business,<br>Running on <span class="highlight">Auto</span><span class="highlight2">pilot.</span></h1>
+        <p class="hero-sub">We build AI systems that qualify leads, book discovery calls, and follow up — so you can focus on coaching, not chasing.</p>
+        <div class="cta-group">
+          <a href="https://klivrai.com/booking" class="btn-primary">Book Your Free Strategy Call →</a>
+        </div>
+        <p class="hero-note">No commitment. 30 minutes. We'll show you exactly what's possible.</p>
+      </div>
+      <div class="mockup-card">
+        <div class="tag-live"><span class="dot"></span> Live Demo</div>
+        <div class="mockup-header">
+          <div class="dot-red"></div>
+          <div class="dot-yellow"></div>
+          <div class="dot-green"></div>
+          <span style="font-size:0.75rem;color:var(--muted);margin-left:0.5rem">Klivr AI Assistant</span>
+        </div>
+        <div class="chat-label">AI Assistant</div>
+        <div class="chat-bubble chat-bot">Hey! 👋 I'm Klivr AI — built to help coaches like you wake up to booked calls every morning, automatically. What's your name? 😊</div>
+        <div class="chat-bubble chat-user">Sarah Johnson</div>
+        <div class="chat-bubble chat-bot">Thanks, Sarah! What's your biggest challenge right now with getting leads or booking calls?</div>
+        <div class="chat-bubble chat-user">I spend hours chasing leads but barely anyone books</div>
+        <div class="chat-bubble chat-bot">I totally get that 😔 Most coaches waste 10+ hours/week on this. What's the best email to reach you so I can send you some free resources?</div>
+        <div class="typing"><span></span><span></span><span></span></div>
+        <div style="margin-top:1rem;padding:0.7rem 1rem;background:rgba(0,229,195,0.08);border:1px solid rgba(0,229,195,0.2);border-radius:8px;font-size:0.75rem;color:var(--accent2);display:flex;align-items:center;gap:0.5rem">
+          ✅ Lead captured → Added to GHL CRM → Follow-up started
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem" id="problem">
+  <div class="container">
+    <div class="section-label">The Problem</div>
+    <h2 class="section-title">Your competitors are scaling.<br>You're still doing it manually.</h2>
+    <p class="section-sub">Every hour spent on repetitive tasks is an hour away from the work that actually grows your coaching business.</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">😩</div>
+        <h4>Leads go cold in minutes</h4>
+        <p>You're busy coaching. By the time you follow up, your lead already booked someone else who responded in 30 seconds.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📅</div>
+        <h4>You're playing human calendar</h4>
+        <p>Back-and-forth messages just to set a discovery call. It's exhausting, unprofessional, and kills momentum.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">💸</div>
+        <h4>Leads cost money. Wasting them hurts.</h4>
+        <p>You're spending on ads, content, and outreach — but without a proper system, most leads slip through the cracks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="padding:6rem 2rem">
+  <div class="container">
+    <div class="section-label">What We Build</div>
+    <h2 class="section-title">Six AI systems. One unfair advantage.</h2>
+    <p class="section-sub">Each system is custom-built for your coaching business — not a template, not a plugin.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🤖</div>
+        <h3>AI Chatbot (24/7)</h3>
+        <p>A smart AI assistant that qualifies every lead, answers questions, and books discovery calls — even at 3am while you sleep.</p>
+        <span class="service-tag">Included in Setup</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚙️</div>
+        <h3>GHL CRM + Automation</h3>
+        <p>Your entire lead management system built on GoHighLevel — pipelines, tags, automations, and smart follow-up sequences.</p>
+        <span class="service-tag">Included in Setup</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📧</div>
+        <h3>Lead Nurture & Follow-Up</h3>
+        <p>Multi-step email and SMS sequences that follow up automatically — turning cold leads into booked calls without you lifting a finger.</p>
+        <span class="service-tag">Included in Setup</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📞</div>
+        <h3>AI Voice Agent</h3>
+        <p>An AI that actually calls your leads, qualifies them by phone, and books them into your calendar — hands-free discovery call booking.</p>
+        <span class="service-tag coming-soon">Coming Soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works" id="how">
+  <div class="container">
+    <div class="section-label">The Process</div>
+    <h2 class="section-title">From strategy to deployed system in under 2 weeks.</h2>
+    <p class="section-sub">No long agency contracts. No technical headaches. Just results.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Free Strategy Call</h4>
+        <p>We audit your current process and map out exactly what your AI system needs to do.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>System Design</h4>
+        <p>We design your custom AI chatbot, GHL workflows, and automation sequences.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Build & Test</h4>
+        <p>We build everything and test it with real scenarios before going live.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Deploy & Support</h4>
+        <p>We launch your system and provide ongoing support to keep it optimized.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" style="padding:6rem 2rem">
+  <div class="container" style="text-align:center">
+    <div class="section-label">Pricing</div>
+    <h2 class="section-title">Simple, transparent pricing.</h2>
+    <p class="section-sub" style="margin:0 auto">No hidden fees. No surprise bills. Just a system that pays for itself.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="plan-name">AI Starter System</div>
+        <div class="price-label">One-time setup</div>
+        <div class="price">$500 <span>– $1,000</span></div>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.6">Everything you need to start capturing and converting leads on autopilot.</p>
+        <ul class="feature-list">
+          <li><span class="check">✓</span> AI Chatbot (24/7 lead capture)</li>
+          <li><span class="check">✓</span> GHL CRM setup + pipeline</li>
+          <li><span class="check">✓</span> Booking calendar integration</li>
+          <li><span class="check">✓</span> Welcome email sequence</li>
+          <li><span class="check">✓</span> 2 weeks of support</li>
+        </ul>
+        <a href="https://klivrai.com/booking" class="btn-outline">Book a Free Call →</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="featured-badge">Most Popular</div>
+        <div class="plan-name">AI Growth Retainer</div>
+        <div class="price-label">Monthly</div>
+        <div class="price">$300 <span>– $500/mo</span></div>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.6">Ongoing management, optimization, and support to keep your system converting.</p>
+        <ul class="feature-list">
+          <li><span class="check">✓</span> Everything in Starter</li>
+          <li><span class="check">✓</span> Monthly system optimization</li>
+          <li><span class="check">✓</span> New automation builds</li>
+          <li><span class="check">✓</span> Priority support</li>
+          <li><span class="check">✓</span> Early access to AI Voice Agent</li>
+        </ul>
+        <a href="https://klivrai.com/booking" class="btn-outline btn-accent">Book a Free Call →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder" id="founder">
+  <div class="container">
+    <div class="founder-inner">
+      <div class="founder-img" style="padding:0;overflow:hidden;background:none;border:2px solid var(--border)">
+        <img src="https://i.imgur.com/xIuW7xA.png" alt="Rey Pilar - Founder & GHL Automation Specialist, Klivr AI" style="width:100%;height:100%;object-fit:cover;border-radius:18px">
+      </div>
+      <div class="founder-text">
+        <div class="section-label">Why Klivr AI</div>
+        <div style="margin-bottom:0.8rem"><span style="font-family:'Urbanist',sans-serif;font-weight:700;font-size:1.1rem">Rey Pilar</span> <span style="color:var(--muted);font-size:0.85rem">· Founder & GHL Automation Specialist</span></div>
+        <h2>Built by someone who knows your tools inside and out.</h2>
+        <p>I'm Rey — a GHL specialist and AI automation builder based in the Philippines. I started Klivr AI because I kept seeing online coaches struggle with the same problem: great at coaching, terrible at following up.</p>
+        <p>I specialize in GoHighLevel — the exact platform most coaches already use — so I'm not learning on your dime. I know every workflow, every trigger, and every automation that makes the difference between a lead going cold and a call getting booked.</p>
+        <p>Klivr AI is built on zero fluff and maximum results. No fancy agency overhead. Just a focused system, built right, that works 24/7 for your business.</p>
+        <div class="founder-signature">— Rey</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding:6rem 2rem">
+  <div class="container" style="text-align:center">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">Everything you're wondering before you book.</h2>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Do I need to know anything technical?
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a">Not at all. I handle everything — the chatbot, the GHL setup, the automations, the integrations. You just need to show up to the strategy call and tell me about your business.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Will this work with my current GHL account?
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a">Yes! I build directly inside your existing GHL account. No new platforms, no extra logins. Everything lives inside the tools you already have.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          How long does it take to set up?
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a">Most systems are fully built and live within 1–2 weeks of our strategy call. Simple setups can be done even faster.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What if the system doesn't perform as expected?
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a">Every system comes with 2 weeks of support after launch. We monitor, tweak, and optimize until it's performing the way it should. Your success is my reputation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What type of coaches do you work with?
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a">Any online coach who uses discovery calls to sell their programs — business coaches, life coaches, fitness coaches, mindset coaches, and more. If you book calls to close clients, we can automate that process for you.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section">
+  <div class="cta-bg"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <h2>The cost of staying manual<br>is compounding.</h2>
+    <p>Every week without a system is another week of chasing leads manually, missing follow-ups, and leaving bookings on the table. Let's fix that.</p>
+    <a href="https://klivrai.com/booking" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem">Book Your Free Strategy Call →</a>
+    <p style="margin-top:1rem;font-size:0.8rem;color:var(--muted)">Free 30-minute call · No commitment · Built for online coaches</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div style="margin-bottom:1rem">
+    <a href="https://www.facebook.com/profile.php?id=61589931454207" target="_blank" style="color:var(--muted);text-decoration:none;margin:0 0.8rem;font-size:0.85rem;transition:color 0.2s" onmouseover="this.style.color='#7c5cfc'" onmouseout="this.style.color='#8a8a9a'">Facebook</a>
+    <a href="https://www.instagram.com/theklivrai/" target="_blank" style="color:var(--muted);text-decoration:none;margin:0 0.8rem;font-size:0.85rem;transition:color 0.2s" onmouseover="this.style.color='#7c5cfc'" onmouseout="this.style.color='#8a8a9a'">Instagram</a>
+    <a href="mailto:supportklivrai@gmail.com" style="color:var(--muted);text-decoration:none;margin:0 0.8rem;font-size:0.85rem;transition:color 0.2s" onmouseover="this.style.color='#7c5cfc'" onmouseout="this.style.color='#8a8a9a'">supportklivrai@gmail.com</a>
+    <a href="https://klivrai.com/booking" style="color:var(--accent);text-decoration:none;margin:0 0.8rem;font-size:0.85rem">Book a Free Call</a>
+  </div>
+  <div><strong>Klivr AI</strong> · AI Automation Agency for Online Coaches · Built by Rey Pilar · Philippines 🇵🇭</div>
+  <div style="margin-top:0.5rem;font-size:0.75rem;color:#555">© 2026 Klivr AI. All rights reserved.</div>
+</footer>
+
+<!-- BOTPRESS CHATBOT -->
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/05/25/06/20260525063625-5O1G5M5H.js" defer></script>
+
+<!-- FAQ TOGGLE -->
+<script>
+function toggleFaq(el) {
+  const item = el.parentElement;
+  item.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
