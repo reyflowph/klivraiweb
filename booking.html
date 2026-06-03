@@ -1,0 +1,279 @@
+<!--
+  KLIVR AI — Thank You + Booking Page
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet"/>
+
+<style>
+#KT, #KT *, #KT *::before, #KT *::after {
+  box-sizing: border-box; margin: 0; padding: 0;
+}
+#KT {
+  background: #0A0A0B; color: #F8F8FA;
+  font-family: 'Urbanist', sans-serif; font-size: 16px; line-height: 1.6;
+  width: 100%; overflow-x: hidden; -webkit-font-smoothing: antialiased; position: relative;
+}
+#KT .kt-bg-grid {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(124,58,237,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(124,58,237,.04) 1px, transparent 1px);
+  background-size: 56px 56px; pointer-events: none; z-index: 0;
+}
+#KT .kt-bg-glow {
+  position: absolute; top: -180px; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(34,197,94,.08), transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+#KT h1, #KT h2, #KT h3, #KT h4 {
+  font-family: 'Urbanist', sans-serif; line-height: 1.15; letter-spacing: -.02em; color: #F8F8FA;
+}
+#KT .kt-nav {
+  position: sticky; top: 0; z-index: 999; height: 58px; padding: 0 1.5rem;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(10,10,11,.95); backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,.06); width: 100%;
+}
+#KT .kt-logo {
+  font-family: 'Urbanist', sans-serif; font-weight: 700; font-size: 19px;
+  background: linear-gradient(135deg, #fff, #06B6D4);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+#KT .kt-page {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 50px 1.25rem 60px; position: relative; z-index: 1;
+}
+@keyframes kt-fu { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+@keyframes kt-pop { from{opacity:0;transform:scale(.85)} to{opacity:1;transform:scale(1)} }
+@keyframes kt-pu { 0%,100%{opacity:1} 50%{opacity:.3} }
+#KT .kt-success-icon {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: rgba(34,197,94,.12); border: 2px solid rgba(34,197,94,.3);
+  display: flex; align-items: center; justify-content: center; font-size: 32px;
+  margin: 2rem auto 1.25rem; animation: kt-pop .5s ease both;
+  box-shadow: 0 0 32px rgba(34,197,94,.15);
+}
+#KT .kt-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(34,197,94,.1); border: 1px solid rgba(34,197,94,.25);
+  color: #4ade80; font-size: 12px; font-weight: 600;
+  padding: 5px 14px; border-radius: 50px; margin-bottom: 1.25rem;
+  animation: kt-fu .5s .1s ease both;
+}
+#KT .kt-dot { width: 6px; height: 6px; border-radius: 50%; background: #4ade80; animation: kt-pu 1.5s infinite; }
+#KT .kt-h1 {
+  font-size: clamp(28px, 5vw, 54px); text-align: center;
+  max-width: 700px; margin: 0 auto .875rem; animation: kt-fu .6s .15s ease both;
+}
+#KT .kt-gr {
+  background: linear-gradient(135deg, #9D5FF5, #22D3EE);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+#KT .kt-sub {
+  font-size: clamp(15px, 2vw, 18px); color: #888897; text-align: center;
+  max-width: 520px; margin: 0 auto 2rem; line-height: 1.65; animation: kt-fu .6s .2s ease both;
+}
+#KT .kt-urgency {
+  display: flex; align-items: center; gap: 10px;
+  background: rgba(239,68,68,.07); border: 1px solid rgba(239,68,68,.2);
+  border-radius: 10px; padding: 12px 18px; font-size: 13px; color: #fca5a5;
+  margin-bottom: 2rem; max-width: 900px; width: 100%; animation: kt-fu .6s .25s ease both;
+}
+#KT .kt-grid {
+  display: grid; grid-template-columns: 1.4fr 1fr;
+  gap: 1.5rem; width: 100%; max-width: 900px; animation: kt-fu .7s .3s ease both;
+}
+#KT .kt-cal-card {
+  background: #111113; border: 1px solid rgba(255,255,255,.08);
+  border-radius: 22px; overflow: hidden; position: relative;
+}
+#KT .kt-cal-card::before {
+  content: ''; position: absolute; inset: -1px; border-radius: 22px;
+  background: linear-gradient(135deg, rgba(124,58,237,.3), rgba(6,182,212,.1), transparent 60%);
+  z-index: 0; pointer-events: none;
+}
+#KT .kt-cal-header {
+  padding: 1.25rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,.07);
+  display: flex; align-items: center; gap: 10px; position: relative; z-index: 1;
+}
+#KT .kt-cal-icon {
+  width: 36px; height: 36px; border-radius: 9px;
+  background: linear-gradient(135deg, #7C3AED, #06B6D4);
+  display: flex; align-items: center; justify-content: center; font-size: 18px;
+}
+#KT .kt-cal-title { font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 15px; }
+#KT .kt-cal-sub   { font-size: 12px; color: #888897; }
+#KT .kt-cal-body  { position: relative; z-index: 1; padding: 0; }
+
+/* ✅ GHL Calendar Iframe */
+#KT .kt-cal-frame {
+  width: 100%; height: 680px; border: none; display: block; background: #111113;
+}
+
+#KT .kt-right { display: flex; flex-direction: column; gap: 1.25rem; }
+#KT .kt-expect {
+  background: #111113; border: 1px solid rgba(255,255,255,.07); border-radius: 18px; padding: 1.5rem;
+}
+#KT .kt-ec-title {
+  font-size: 12px; font-weight: 600; color: #545460;
+  text-transform: uppercase; letter-spacing: .08em; margin-bottom: 1rem;
+}
+#KT .kt-ec-list { display: flex; flex-direction: column; gap: .875rem; }
+#KT .kt-eci { display: flex; align-items: flex-start; gap: 11px; }
+#KT .kt-eci-num {
+  width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, #7C3AED, #06B6D4);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; color: #fff; font-family: 'Urbanist', sans-serif;
+}
+#KT .kt-eci-text h4 { font-size: 14px; font-weight: 600; color: #F8F8FA; margin-bottom: 2px; }
+#KT .kt-eci-text p  { font-size: 12px; color: #888897; line-height: 1.5; }
+#KT .kt-testi {
+  background: #111113; border: 1px solid rgba(255,255,255,.07); border-radius: 18px; padding: 1.5rem;
+}
+#KT .kt-stars { color: #FBBF24; font-size: 13px; margin-bottom: .75rem; }
+#KT .kt-tq { font-size: 14px; color: #888897; line-height: 1.65; font-style: italic; margin-bottom: 1rem; }
+#KT .kt-tq::before { content: '"' }
+#KT .kt-tq::after  { content: '"' }
+#KT .kt-tauthor { display: flex; align-items: center; gap: 9px; }
+#KT .kt-tav {
+  width: 34px; height: 34px; border-radius: 50%; background: rgba(124,58,237,.15);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 13px; color: #9D5FF5; font-family: 'Urbanist', sans-serif;
+}
+#KT .kt-tname { font-weight: 600; font-size: 13px; color: #F8F8FA; }
+#KT .kt-trole { font-size: 11px; color: #545460; }
+#KT .kt-reassure {
+  background: rgba(34,197,94,.05); border: 1px solid rgba(34,197,94,.15); border-radius: 14px; padding: 1.25rem;
+}
+#KT .kt-reassure h4 {
+  font-size: 14px; font-weight: 600; color: #4ade80; margin-bottom: .5rem; display: flex; align-items: center; gap: 7px;
+}
+#KT .kt-reassure p { font-size: 13px; color: #888897; line-height: 1.55; }
+#KT .kt-next {
+  width: 100%; max-width: 900px; margin-top: 1.5rem;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; animation: kt-fu .7s .4s ease both;
+}
+#KT .kt-ns {
+  background: #111113; border: 1px solid rgba(255,255,255,.07); border-radius: 14px; padding: 1.25rem; text-align: center;
+}
+#KT .kt-ns-num   { font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:600; color:#545460; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.5rem; }
+#KT .kt-ns-icon  { font-size: 22px; margin-bottom: .5rem; }
+#KT .kt-ns-title { font-size: 14px; font-weight: 600; color: #F8F8FA; margin-bottom: .25rem; }
+#KT .kt-ns-desc  { font-size: 12px; color: #888897; line-height: 1.5; }
+@media (max-width: 720px) {
+  #KT .kt-grid { grid-template-columns: 1fr; }
+  #KT .kt-next { grid-template-columns: 1fr; }
+  #KT .kt-cal-frame { height: 580px; }
+}
+</style>
+
+<div id="KT">
+  <div class="kt-bg-grid"></div>
+  <div class="kt-bg-glow"></div>
+
+  <div class="kt-nav">
+    <div class="kt-logo">KLIVR AI</div>
+  </div>
+
+  <div class="kt-page">
+
+    <div class="kt-success-icon">✅</div>
+    <div class="kt-badge"><span class="kt-dot"></span>You're confirmed — one step left</div>
+
+    <h1 class="kt-h1">
+      You're In! Now Pick Your<br/><span class="kt-gr">Audit Time Slot</span>
+    </h1>
+    <p class="kt-sub">
+      We've reserved your spot. Choose a time below and our AI strategist will come prepared with insights specific to your business — ready to show you the exact gap you're missing.
+    </p>
+
+    <div class="kt-urgency">
+      <span>⚡</span>
+      <span><strong>Heads up:</strong> We only take 3–5 audits per week to keep quality high. Your slot is held for 10 minutes — book now before it releases.</span>
+    </div>
+
+    <div class="kt-grid">
+
+      <!-- ✅ GHL Calendar Embedded -->
+      <div class="kt-cal-card">
+        <div class="kt-cal-header">
+          <div class="kt-cal-icon">📅</div>
+          <div>
+            <div class="kt-cal-title">Book Your Free AI Audit</div>
+            <div class="kt-cal-sub">30 min · Google Meet · Free</div>
+          </div>
+        </div>
+        <div class="kt-cal-body">
+          <iframe
+            class="kt-cal-frame"
+            src="https://api.leadconnectorhq.com/widget/booking/fStJdGol1XTsZLUyszFb"
+            title="Book your free AI audit"
+            loading="lazy"
+            allow="camera; microphone; fullscreen"
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="kt-right">
+        <div class="kt-expect">
+          <div class="kt-ec-title">What happens on the call</div>
+          <div class="kt-ec-list">
+            <div class="kt-eci">
+              <div class="kt-eci-num">1</div>
+              <div class="kt-eci-text"><h4>We audit your revenue leaks (10 min)</h4><p>We'll map exactly where leads, time, and money are slipping through — based on what you told us in the form.</p></div>
+            </div>
+            <div class="kt-eci">
+              <div class="kt-eci-num">2</div>
+              <div class="kt-eci-text"><h4>We build your AI blueprint (10 min)</h4><p>You'll get a clear, prioritized list of AI systems that would have the biggest impact on your specific business right now.</p></div>
+            </div>
+            <div class="kt-eci">
+              <div class="kt-eci-num">3</div>
+              <div class="kt-eci-text"><h4>We give you the numbers (10 min)</h4><p>A real, conservative ROI estimate so you can see what your business looks like with the bottlenecks removed.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="kt-testi">
+          <div class="kt-stars">★★★★★</div>
+          <p class="kt-tq">I booked the call not expecting much. 30 minutes later I had a clear plan, specific numbers, and more clarity on my AI strategy than 6 months of figuring it out myself.</p>
+          <div class="kt-tauthor">
+            <div class="kt-tav">JM</div>
+            <div>
+              <div class="kt-tname">James M.</div>
+              <div class="kt-trole">Founder, Growth Marketing Agency</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="kt-reassure">
+          <h4>🔒 Zero pressure. Zero pitch.</h4>
+          <p>This is a strategy session, not a sales call. We'll give you real value whether you work with us or not. If we're a fit, we'll tell you. If not, you'll still walk away with a clear roadmap.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="kt-next">
+      <div class="kt-ns">
+        <div class="kt-ns-num">After booking</div>
+        <div class="kt-ns-icon">📧</div>
+        <div class="kt-ns-title">Check your email</div>
+        <div class="kt-ns-desc">You'll receive a confirmation + a short prep form so we can make the most of your 30 minutes.</div>
+      </div>
+      <div class="kt-ns">
+        <div class="kt-ns-num">Before the call</div>
+        <div class="kt-ns-icon">📋</div>
+        <div class="kt-ns-title">Fill in the prep form</div>
+        <div class="kt-ns-desc">Takes 2 minutes. Helps us come prepared with insights specific to your business — not a generic pitch.</div>
+      </div>
+      <div class="kt-ns">
+        <div class="kt-ns-num">On the call</div>
+        <div class="kt-ns-icon">🚀</div>
+        <div class="kt-ns-title">Get your AI blueprint</div>
+        <div class="kt-ns-desc">Walk away with a clear, prioritized AI roadmap and real ROI numbers — in 30 minutes flat.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
