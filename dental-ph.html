@@ -9,6 +9,8 @@
 <meta name="author" content="Rey Pilar - Klivr AI">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.klivrai.com/dental-ph">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
@@ -292,6 +294,42 @@ footer{border-top:1px solid var(--card-border);padding:44px 0 28px;}
 .footer-bottom a{color:var(--muted-2);transition:color .15s;}
 .footer-bottom a:hover{color:var(--muted);}
 
+
+/* HERO BULLETS */
+.hero-bullets{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:24px;}
+.hero-bullet{display:flex;align-items:center;gap:7px;background:rgba(74,222,158,0.08);border:1px solid rgba(74,222,158,0.2);border-radius:100px;padding:6px 14px;font-size:13.5px;font-weight:600;color:var(--text);}
+.hero-bullet::before{content:'✓';color:var(--mint);font-weight:800;}
+
+/* STATS BAR */
+.stats-bar{background:var(--card);border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);padding:28px 0;margin-top:0;}
+.stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:860px;margin:0 auto;}
+.stat-item{text-align:center;padding:0 20px;position:relative;}
+.stat-item:not(:last-child)::after{content:'';position:absolute;right:0;top:10%;height:80%;width:1px;background:var(--card-border);}
+.stat-num{font-size:32px;font-weight:900;color:var(--mint);letter-spacing:-0.03em;line-height:1;}
+.stat-label{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.4;}
+
+/* PAANO GUMAGANA */
+.paano-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:860px;margin:0 auto;}
+.paano-card{background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius);padding:28px;text-align:center;position:relative;}
+.paano-num{width:44px;height:44px;border-radius:50%;background:var(--violet);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;margin:0 auto 16px;}
+.paano-card h3{font-size:15px;font-weight:700;margin-bottom:8px;}
+.paano-card p{font-size:13px;color:var(--muted);line-height:1.6;}
+.paano-arrow{display:none;}
+
+/* PILOT BADGE */
+.pilot-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,180,0,0.08);border:1px solid rgba(255,180,0,0.25);border-radius:100px;padding:6px 16px;font-size:12.5px;font-weight:700;color:#FFB400;margin-bottom:16px;}
+.pilot-badge::before{content:'⚡';}
+
+/* ANCHOR LINE */
+.anchor-line{text-align:center;font-size:15px;color:var(--muted);margin-bottom:32px;}
+.anchor-line strong{color:var(--text);}
+
+@media(max-width:900px){
+  .stats-inner{grid-template-columns:repeat(2,1fr);gap:20px;}
+  .stat-item::after{display:none;}
+  .paano-row{grid-template-columns:1fr;}
+}
+
 /* RESPONSIVE */
 @media(max-width:900px){
   .problem-grid,.feature-grid,.process-row{grid-template-columns:1fr;}
@@ -330,6 +368,13 @@ footer{border-top:1px solid var(--card-border);padding:44px 0 28px;}
       <div class="eyebrow">AI Chatbot para sa Dental Clinics 🦷</div>
       <h1>AI Chatbot Receptionist para sa Dental Clinics Philippines —<br>Huwag Nang Palampasin Ang <span class="accent">Bawat Patient.</span></h1>
       <p class="hero-sub">AI chatbot receptionist na <strong>sumasagot sa mga patients 24/7</strong> — nag-bo-book, nag-re-reschedule, at nag-ca-cancel ng appointment <strong>kahit 2am pa.</strong> Automatic. Walang dagdag na staff.</p>
+      <div class="hero-bullets">
+        <div class="hero-bullet">Sumasagot agad</div>
+        <div class="hero-bullet">Nag-bo-book ng appointment</div>
+        <div class="hero-bullet">Nag-re-reschedule</div>
+        <div class="hero-bullet">Available 24/7</div>
+        <div class="hero-bullet">Walang missed inquiry</div>
+      </div>
       <div class="hero-ctas">
         <a href="https://calendly.com/reymundopilarjr/libreng-ai-receptionist-strategy-call" target="_blank" class="btn-primary">Book a Free Call →</a>
         <a href="#demo" class="btn-ghost">
@@ -357,6 +402,30 @@ footer{border-top:1px solid var(--card-border);padding:44px 0 28px;}
     </div>
   </div>
 </section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="wrap">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Laging Online<br>Kahit 2am</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">0</div>
+        <div class="stat-label">Missed na<br>Chat Inquiry</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">&lt;30s</div>
+        <div class="stat-label">Average<br>Response Time</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">₱50</div>
+        <div class="stat-label">Per Araw Lang<br>Lahat Kasama</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- DEMO -->
 <div class="demo-section" id="demo">
@@ -442,7 +511,7 @@ footer{border-top:1px solid var(--card-border);padding:44px 0 28px;}
         <div class="ico-wrap" style="margin-bottom:16px;">
           <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         </div>
-        <h3>Nag-bo-book ng appointment</h3>
+        <h3>Hindi na mawawala ang booking</h3>
         <p>Niche-check ang live calendar niyo, naghahanap ng available slot, at nag-bo-book — walang double booking, walang manual na ginagawa.</p>
         <span class="tag">Core feature</span>
       </div>
@@ -450,7 +519,7 @@ footer{border-top:1px solid var(--card-border);padding:44px 0 28px;}
         <div class="ico-wrap" style="margin-bottom:16px;">
           <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
         </div>
-        <h3>Reschedule at cancellation</h3>
+        <h3>Walang hassle sa pagbabago ng schedule</h3>
         <p>Magsabi lang ang patient na gusto nilang baguhin ang schedule — hahawakan ni Aria ang lahat, automatic na mag-a-update ang calendar niyo.</p>
         <span class="tag">Core feature</span>
       </div>
@@ -458,7 +527,7 @@ footer{border-top:1px solid var(--card-border);padding:44px 0 28px;}
         <div class="ico-wrap" style="margin-bottom:16px;">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
-        <h3>Online 24/7 — kahit gabi</h3>
+        <h3>Walang patient na mawawala after hours</h3>
         <p>Gabi man, weekend, o lunch break — sumasagot agad si Aria sa bawat mensahe, every single time. Walang palya.</p>
         <span class="tag">Core feature</span>
       </div>
@@ -466,7 +535,7 @@ footer{border-top:1px solid var(--card-border);padding:44px 0 28px;}
         <div class="ico-wrap" style="margin-bottom:16px;">
           <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
         </div>
-        <h3>Nilo-log sa Google Sheets</h3>
+        <h3>Lahat ng inquiries ay automatic na nase-save</h3>
         <p>Bawat booking, pangalan, at contact number — automatic na nire-record sa inyong spreadsheet para makita ng staff niyo agad.</p>
         <span class="tag">Core feature</span>
       </div>
@@ -531,14 +600,44 @@ footer{border-top:1px solid var(--card-border);padding:44px 0 28px;}
   </div>
 </section>
 
+<!-- PAANO GUMAGANA -->
+<section>
+  <div class="wrap">
+    <div class="section-head" style="text-align:center;max-width:560px;margin:0 auto 44px;">
+      <div class="eyebrow-label" style="text-align:center;">Paano Gumagana</div>
+      <h2>Simple lang ang proseso —<br>kaya mo itong simulan ngayon.</h2>
+      <p class="section-sub" style="margin:0 auto;">Walang technical na kailangan gawin sa inyo. Kami ang bahala sa lahat.</p>
+    </div>
+    <div class="paano-row">
+      <div class="paano-card">
+        <div class="paano-num">1</div>
+        <h3>Ikokonekta namin ang chatbot</h3>
+        <p>I-se-set up namin si Aria sa Facebook page o website ng clinic niyo — walang kailangan gawin sa inyo.</p>
+      </div>
+      <div class="paano-card">
+        <div class="paano-num">2</div>
+        <h3>Sumasagot si Aria sa patients</h3>
+        <p>Kapag nag-message ang patient — sasagutin ni Aria, magche-check ng schedule, at magbo-book ng appointment. Automatic.</p>
+      </div>
+      <div class="paano-card">
+        <div class="paano-num">3</div>
+        <h3>Nakikita niyo agad ang bookings</h3>
+        <p>Lahat ng appointments ay napupunta sa Google Calendar niyo at nise-save sa Google Sheets — real time, walang palya.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PRICING -->
 <section id="pricing" class="section-alt">
   <div class="wrap">
     <div class="section-head" style="text-align:center;max-width:560px;margin:0 auto 48px;">
       <div class="eyebrow-label" style="text-align:center;">Presyo</div>
+      <div class="pilot-badge">Founding Client Program — Unang 5 Dental Clinics Lang</div>
       <h2>Simple. Transparent. Walang hidden fees.</h2>
       <p class="section-sub" style="margin:0 auto;">Isang recovered patient lang — bayad na ang setup fee niyo.</p>
     </div>
+    <p class="anchor-line">Mas mura kaysa sa isang part-time receptionist — <strong>at available 24/7 pa.</strong></p>
     <div class="pricing-single">
       <div class="price-card">
         <div class="price-tier-icon">
