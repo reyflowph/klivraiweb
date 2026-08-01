@@ -1,19 +1,21 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": true,
   "redirects": [
     {
       "source": "/",
-      "destination": "/klivr-ai-global/index.html",
+      "destination": "/klivr-ai-global/",
       "permanent": false
     },
     {
       "source": "/global",
-      "destination": "/klivr-ai-global/index.html",
+      "destination": "/klivr-ai-global/",
       "permanent": false
     },
     {
       "source": "/ph",
-      "destination": "/klivr-ai-ph/index.html",
+      "destination": "/klivr-ai-ph/",
       "permanent": false
     }
   ]
