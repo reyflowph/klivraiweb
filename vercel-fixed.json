@@ -2,21 +2,26 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
+  "rewrites": [
     {
       "source": "/",
-      "destination": "/klivr-ai-global",
-      "permanent": false
+      "destination": "/klivr-ai-global/index.html"
     },
     {
       "source": "/global",
-      "destination": "/klivr-ai-global",
-      "permanent": false
+      "destination": "/klivr-ai-global/index.html"
     },
     {
       "source": "/ph",
-      "destination": "/klivr-ai-ph",
-      "permanent": false
+      "destination": "/klivr-ai-ph/index.html"
+    },
+    {
+      "source": "/global/:path*",
+      "destination": "/klivr-ai-global/:path*"
+    },
+    {
+      "source": "/ph/:path*",
+      "destination": "/klivr-ai-ph/:path*"
     }
   ]
 }
