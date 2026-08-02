@@ -1,1 +1,0 @@
-V2.6 fixes: rebuilt all gallery mockups at 2600x1820 with crisp HTML-like typography; corrected SVL gallery cover; featured desktop now uses desktop-home.png and phone uses mobile-home.png; removed incorrect zoom/crop transforms.
