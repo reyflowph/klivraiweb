@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+    <defs>
+      <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0a8"/><stop offset=".45" stop-color="#c98b22"/><stop offset="1" stop-color="#6f3d0b"/></linearGradient>
+      <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-opacity=".22"/></filter>
+    
+      <clipPath id="heroPhotoClip"><rect x="650" y="158" width="537" height="485" rx="24"/></clipPath>
+      <linearGradient id="photoShade" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#000000" stop-opacity=".08"/>
+        <stop offset=".65" stop-color="#000000" stop-opacity=".02"/>
+        <stop offset="1" stop-color="#000000" stop-opacity=".18"/>
+      </linearGradient>
+    </defs>
+    <rect width="1600" height="1000" fill="#eee9e0"/>
+    <rect x="55" y="72" width="1160" height="795" rx="32" fill="#ffffff" stroke="#d8dee7" stroke-width="3" filter="url(#shadow)"/>
+    <rect x="55" y="72" width="1160" height="74" rx="32" fill="#ffffff"/>
+    <circle cx="100" cy="109" r="10" fill="#ff6b67"/><circle cx="132" cy="109" r="10" fill="#f7c94c"/><circle cx="164" cy="109" r="10" fill="#54c878"/>
+    <text x="215" y="119" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800" fill="#16377b">KIDS DENTAL</text>
+    <text x="820" y="116" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#5f6670">HOME</text>
+    <text x="905" y="116" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#5f6670">SERVICES</text>
+    <rect x="1015" y="88" width="155" height="43" rx="22" fill="#6248ed"/>
+    <text x="1092" y="116" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="800" fill="white">BOOK NOW</text>
+
+    <rect x="82" y="158" width="1105" height="485" rx="24" fill="#f8fbff"/>
+    <text x="145" y="245" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#6248ed" letter-spacing="3">PREMIUM KIDS EXPERIENCE</text>
+    <text x="145" y="335" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="800" fill="#16377b" letter-spacing="-3">Happy Kids,</text><text x="145" y="427" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="800" fill="#16377b" letter-spacing="-3">Healthy Smiles!</text>
+    <text x="145" y="539" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#5f6670">Friendly dental visits made fun for little patients.</text>
+    <rect x="145" y="589" width="225" height="60" rx="30" fill="#6248ed"/>
+    <text x="258" y="628" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="800" fill="white">GET STARTED</text>
+    
+          
+    <g clip-path="url(#heroPhotoClip)">
+      <image href="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1800&q=90" x="650" y="158" width="537" height="485"
+             preserveAspectRatio="xMidYMid slice"/>
+      <rect x="650" y="158" width="537" height="485" fill="url(#photoShade)"/>
+    </g>
+    <rect x="650" y="158" width="537" height="485" rx="24"
+          fill="none" stroke="rgba(255,255,255,.48)" stroke-width="2"/>
+    <g>
+      <rect x="82" y="670" width="250" height="150" rx="20" fill="#f8fbff" stroke="#d8dee7"/>
+      <rect x="352" y="670" width="250" height="150" rx="20" fill="#f8fbff" stroke="#d8dee7"/>
+      <rect x="622" y="670" width="250" height="150" rx="20" fill="#f8fbff" stroke="#d8dee7"/>
+      <rect x="892" y="670" width="295" height="150" rx="20" fill="#f8fbff" stroke="#d8dee7"/>
+      <circle cx="135" cy="718" r="22" fill="#78cfff"/><circle cx="405" cy="718" r="22" fill="#78cfff"/><circle cx="675" cy="718" r="22" fill="#78cfff"/><circle cx="945" cy="718" r="22" fill="#78cfff"/>
+      <text x="120" y="775" font-family="Arial" font-size="20" font-weight="800" fill="#16377b">TRUST</text>
+      <text x="390" y="775" font-family="Arial" font-size="20" font-weight="800" fill="#16377b">EXPERTISE</text>
+      <text x="660" y="775" font-family="Arial" font-size="20" font-weight="800" fill="#16377b">RESULTS</text>
+      <text x="930" y="775" font-family="Arial" font-size="20" font-weight="800" fill="#16377b">EASY BOOKING</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="1195" y="150" width="340" height="735" rx="58" fill="#101114"/>
+      <rect x="1213" y="172" width="304" height="691" rx="42" fill="#f8fbff"/>
+      <rect x="1314" y="184" width="100" height="24" rx="12" fill="#101114"/>
+      
+      <image href="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1800&q=90" x="1235" y="225" width="260" height="330"
+             preserveAspectRatio="xMidYMid slice" opacity=".98"/>
+      <rect x="1235" y="225" width="260" height="330" fill="#000" opacity=".18"/>
+      <text x="1250" y="270" font-family="Arial" font-size="22" font-weight="900" fill="white">KIDS</text>
+      <text x="1250" y="485" font-family="Arial" font-size="34" font-weight="900" fill="white">Premium</text>
+      <text x="1250" y="526" font-family="Arial" font-size="34" font-weight="900" fill="white">Experience.</text>
+      <rect x="1250" y="548" width="190" height="44" rx="22" fill="#ffffff"/>
+      <text x="1345" y="577" text-anchor="middle" font-family="Arial" font-size="15" font-weight="800" fill="#111111">LEARN MORE</text>
+<rect x="1250" y="610" width="225" height="110" rx="24" fill="#ffffff" stroke="#d8dee7"/>
+      <circle cx="1290" cy="650" r="18" fill="#78cfff"/>
+      <text x="1325" y="657" font-family="Arial" font-size="18" font-weight="800" fill="#16377b">Trusted care</text>
+      <text x="1270" y="690" font-family="Arial" font-size="16" fill="#5f6670">Clear. Modern. Responsive.</text>
+    </g>
+    </svg>
