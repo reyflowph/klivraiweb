@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Klivr AI — Premium Websites & AI Solutions</title>
+<meta name="description" content="Klivr AI builds premium websites and practical AI solutions for businesses in the Philippines and worldwide." />
+<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+<link rel="icon" href="./favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="./favicon-16x16.png" sizes="16x16" />
+<link rel="shortcut icon" href="./favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --canvas:#fffdf8;
+    --ink:#101214;
+    --lime:#c9f24a;
+    --muted:#6f706f;
+    --paper:#f4f0e7;
+    --violet:#8d7cff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{
+    background:var(--canvas);
+    color:var(--ink);
+    font-family:'DM Sans', sans-serif;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+    overflow-x:hidden;
+  }
+  .noise{
+    position:fixed;inset:0;pointer-events:none;opacity:.4;mix-blend-mode:multiply;
+    background-image:radial-gradient(var(--ink) 0.5px, transparent 0.5px);
+    background-size:3px 3px;
+    z-index:0;
+  }
+  header{
+    padding:28px clamp(20px,5vw,64px) 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:relative;
+    z-index:1;
+  }
+  .logo{
+    font-family:'Manrope', sans-serif;
+    font-weight:800;
+    font-size:18px;
+    letter-spacing:-0.02em;
+  }
+  .logo span{color:var(--violet);}
+  main{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px clamp(20px,5vw,64px);
+    position:relative;
+    z-index:1;
+  }
+  .wrap{
+    width:100%;
+    max-width:920px;
+    text-align:center;
+  }
+  .eyebrow{
+    font-family:'Manrope', sans-serif;
+    font-weight:600;
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:22px;
+  }
+  h1{
+    font-family:'Manrope', sans-serif;
+    font-weight:800;
+    letter-spacing:-0.03em;
+    line-height:0.98;
+    font-size:clamp(40px, 7vw, 84px);
+    margin-bottom:20px;
+  }
+  h1 em{
+    font-style:normal;
+    color:var(--violet);
+  }
+  .sub{
+    color:var(--muted);
+    font-size:clamp(15px,1.6vw,18px);
+    max-width:520px;
+    margin:0 auto 56px;
+    line-height:1.6;
+  }
+  .choices{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    max-width:720px;
+    margin:0 auto;
+  }
+  .choice{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:14px;
+    padding:34px 28px;
+    border-radius:20px;
+    border:1px solid rgba(16,18,20,0.1);
+    background:var(--paper);
+    text-decoration:none;
+    color:var(--ink);
+    text-align:left;
+    transition:transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s ease, background .35s ease;
+    overflow:hidden;
+  }
+  .choice:hover, .choice:focus-visible{
+    transform:translateY(-6px);
+    border-color:var(--ink);
+    outline:none;
+  }
+  .choice:nth-child(2):hover, .choice:nth-child(2):focus-visible{
+    background:var(--ink);
+    color:var(--canvas);
+  }
+  .choice:nth-child(2):hover .choice-tag, .choice:nth-child(2):focus-visible .choice-tag{
+    color:var(--lime);
+    border-color:rgba(201,242,74,.4);
+  }
+  .choice:nth-child(2):hover .choice-desc, .choice:nth-child(2):focus-visible .choice-desc{
+    color:rgba(255,253,248,.7);
+  }
+  .choice-tag{
+    font-family:'Manrope', sans-serif;
+    font-weight:700;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    padding:5px 11px;
+    border-radius:100px;
+    border:1px solid rgba(16,18,20,0.16);
+    color:var(--muted);
+  }
+  .choice h2{
+    font-family:'Manrope', sans-serif;
+    font-weight:800;
+    font-size:26px;
+    letter-spacing:-0.02em;
+  }
+  .choice-desc{
+    font-size:14.5px;
+    color:var(--muted);
+    line-height:1.55;
+  }
+  .choice-cta{
+    margin-top:auto;
+    padding-top:10px;
+    font-family:'Manrope', sans-serif;
+    font-weight:700;
+    font-size:14px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+  }
+  .choice-cta svg{
+    transition:transform .3s ease;
+  }
+  .choice:hover .choice-cta svg{
+    transform:translateX(4px);
+  }
+  footer{
+    padding:24px clamp(20px,5vw,64px) 32px;
+    text-align:center;
+    font-size:13px;
+    color:var(--muted);
+    position:relative;
+    z-index:1;
+  }
+  @media (max-width:640px){
+    .choices{grid-template-columns:1fr;}
+    header{padding-top:22px;}
+  }
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<header>
+  <div class="logo">Klivr<span>AI</span></div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="eyebrow">Klivr AI · Choose your region</p>
+    <h1>Premium websites,<br/>built for <em>where you do business.</em></h1>
+    <p class="sub">We tailor pricing, currency, and positioning to your market. Pick the site that matches where you're based.</p>
+
+    <div class="choices">
+      <a class="choice" href="./ph/" aria-label="Enter Klivr AI Philippines site">
+        <span class="choice-tag">🇵🇭 Local</span>
+        <h2>Philippines</h2>
+        <p class="choice-desc">Pricing in Philippine Peso, built for local businesses across the country.</p>
+        <span class="choice-cta">Enter site
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+
+      <a class="choice" href="./global/" aria-label="Enter Klivr AI Global site">
+        <span class="choice-tag">🌐 International</span>
+        <h2>Global</h2>
+        <p class="choice-desc">Pricing in US Dollars, built for businesses anywhere in the world.</p>
+        <span class="choice-cta">Enter site
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>© <span id="year"></span> Klivr AI. All rights reserved.</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
